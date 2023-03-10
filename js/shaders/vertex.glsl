@@ -4,11 +4,11 @@ uniform vec2 uResolution;
 uniform vec2 uQuadSize;
 uniform vec4 uCorners;
 
-varying vec2 vUv;
 varying vec2 vSize;
+varying vec2 vUv;
 
 void main(){
-  float PI = 3.1415926535897932384626433832795;
+  float PI = 3.1415926;
   vUv = uv;
   float sine = sin(PI*uProgress);
   // create a wave effect taking the length of the uv
@@ -18,18 +18,19 @@ void main(){
   vec4 defaultState = modelMatrix * vec4(position, 1.0);
   vec4 fullScreenState = vec4( position, 1.0 );
   // scale the postion to the size of the width and height of the screen
-  fullScreenState.x *= uResolution.x/uQuadSize.x;
-  fullScreenState.y *= uResolution.y/uQuadSize.y;
+  fullScreenState.x *= uResolution.x;
+  fullScreenState.y *= uResolution.y;
+  fullScreenState.z += uCorners.x;
   float cornersProgress = mix(
     mix(uCorners.z,uCorners.w,uv.x),
     mix(uCorners.x,uCorners.y,uv.x),
     uv.y
   );
 
-  vec4 finalState = mix(defaultState, fullScreenState, uProgress + waves);
+  vec4 finalState = mix(defaultState, fullScreenState, cornersProgress);
 
   // get the step of the quad on each step of the animation
-  vSize = mix(uQuadSize, uResolution, uProgress);
+  vSize = mix(uQuadSize, uResolution, cornersProgress);
   
   gl_Position = projectionMatrix * viewMatrix * finalState;
 }
