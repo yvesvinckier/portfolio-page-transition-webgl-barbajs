@@ -15,22 +15,22 @@ void main(){
   // decrease the number of waves by changing the 15. to a higher or lawer number
   float waves = sine*0.1*sin(5.*length(uv) + 15.*uProgress);
   // set the position to the center of the screen
-  vec4 defaultState = modelMatrix * vec4(position, 1.0);
+  vec4 defaultState = modelMatrix*vec4( position, 1.0 );
   vec4 fullScreenState = vec4( position, 1.0 );
   // scale the postion to the size of the width and height of the screen
-  fullScreenState.x *= uResolution.x;
-  fullScreenState.y *= uResolution.y;
-  fullScreenState.z += uCorners.x;
+  fullScreenState.x *=uResolution.x;
+  fullScreenState.y *=uResolution.y;
+  fullScreenState.z +=uCorners.x;
   float cornersProgress = mix(
     mix(uCorners.z,uCorners.w,uv.x),
     mix(uCorners.x,uCorners.y,uv.x),
     uv.y
   );
 
-  vec4 finalState = mix(defaultState, fullScreenState, cornersProgress);
+  vec4 finalState = mix(defaultState,fullScreenState,cornersProgress);
 
   // get the step of the quad on each step of the animation
-  vSize = mix(uQuadSize, uResolution, cornersProgress);
-  
+  vSize = mix(uQuadSize,uResolution,cornersProgress);
+
   gl_Position = projectionMatrix * viewMatrix * finalState;
 }

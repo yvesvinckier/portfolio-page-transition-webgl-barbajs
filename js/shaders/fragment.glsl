@@ -33,6 +33,6 @@ void main(){
     // vec4 image = texture(uTexture, vUv);
     vec2 correctUV = getUV(vUv, uTextureSize, vSize);
     vec4 image = texture2D(uTexture, correctUV);
-    gl_FragColor = vec4(vUv, 0.0, 1.0);
+    // gl_FragColor = vec4( vUv, 0.0, 1.0);
     gl_FragColor = image;
 }
