@@ -7,6 +7,9 @@ import * as dat from "dat.gui";
 import gsap from "gsap";
 import barba from "@barba/core";
 
+const curve = "M0 502S175 272 500 272s500 230 500 230V0H0Z";
+const flat = "M0 2S175 1 500 1s500 1 500 1V0H0Z";
+
 export default class Sketch {
   constructor(options) {
     this.container = options.domElement;
@@ -105,9 +108,12 @@ export default class Sketch {
             that.asscroll.disable();
             return gsap
               .timeline()
-              .to(".curtain", {
-                duration: 0.3,
-                y: 0,
+              .to(".transition li", {
+                duration: 0.5,
+                scaleY: 1,
+                ease: "expo.out",
+                transformOrigin: "bottom left",
+                stagger: 0.1,
               })
               .to(data.current.container, {
                 opacity: 0,
@@ -138,9 +144,13 @@ export default class Sketch {
 
             return gsap
               .timeline()
-              .to(".curtain", {
-                duration: 0.3,
-                y: "-100%",
+              .to(".transition li", {
+                duration: 0.5,
+                scaleY: 0,
+                ease: "expo.in",
+                transformOrigin: "bottom left",
+                stagger: 0.1,
+                delay: 0.1,
               })
               .from(data.next.container, {
                 opacity: 0,

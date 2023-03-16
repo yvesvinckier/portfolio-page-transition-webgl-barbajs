@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="https://use.typekit.net/jeb3hub.css" />
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
+  <body data-barba="wrapper">
     <div class="header">
       <a href="index.html" class="logo">
         <svg
@@ -36,56 +36,61 @@
       </div>
     </div>
 
-    <div data-barba="wrapper">
-      <div data-barba="container" data-barba-namespace="home">
-        <div asscroll-container>
-          <div class="scroll-wrap">
-            <!-- BEGIN content -->
-            <div class="content">
-              <!-- BEGIN item -->
-              <a href="rotunda.html" class="item">
-                <img src="img/1.jpg" class="js-image" alt="" />
-                <h2>The Rotunda, Birmingham</h2>
-                <p>Residential</p>
-              </a>
-              <!-- END item -->
-              <!-- BEGIN item -->
-              <a href="central.html" class="item">
-                <img src="img/2.jpg" class="js-image" alt="" />
-                <h2>The Central Library, Birmingham</h2>
-                <p>Residential</p>
-              </a>
-              <!-- END item -->
-              <!-- BEGIN item -->
-              <a href="town.html" class="item">
-                <img src="img/3.jpg" class="js-image" alt="" />
-                <h2>The Town Hall, Birmingham</h2>
-                <p>Residential</p>
-              </a>
-              <!-- END item -->
-              <!-- BEGIN item -->
-              <a href="museum.html" class="item">
-                <img src="img/4.jpg" class="js-image" alt="" />
-                <h2>The Museum, Birmingham</h2>
-                <p>Residential</p>
-              </a>
-              <!-- END item -->
-              <!-- BEGIN item -->
-              <a href="art.html" class="item">
-                <img src="img/5.jpg" class="js-image" alt="" />
-                <h2>The Art Gallery, Birmingham</h2>
-                <p>Residential</p>
-              </a>
-              <!-- END item -->
-            </div>
-            <!-- END content -->
+    <main data-barba="container" data-barba-namespace="home">
+      <div asscroll-container>
+        <div class="scroll-wrap">
+          <!-- BEGIN content -->
+          <div class="content">
+            <!-- BEGIN item -->
+            <a href="rotunda.html" class="item">
+              <img src="img/1.jpg" class="js-image" alt="" />
+              <h2>The Rotunda, Birmingham</h2>
+              <p>Residential</p>
+            </a>
+            <!-- END item -->
+            <!-- BEGIN item -->
+            <a href="central.html" class="item">
+              <img src="img/2.jpg" class="js-image" alt="" />
+              <h2>The Central Library, Birmingham</h2>
+              <p>Residential</p>
+            </a>
+            <!-- END item -->
+            <!-- BEGIN item -->
+            <a href="town.html" class="item">
+              <img src="img/3.jpg" class="js-image" alt="" />
+              <h2>The Town Hall, Birmingham</h2>
+              <p>Residential</p>
+            </a>
+            <!-- END item -->
+            <!-- BEGIN item -->
+            <a href="museum.html" class="item">
+              <img src="img/4.jpg" class="js-image" alt="" />
+              <h2>The Museum, Birmingham</h2>
+              <p>Residential</p>
+            </a>
+            <!-- END item -->
+            <!-- BEGIN item -->
+            <a href="art.html" class="item">
+              <img src="img/5.jpg" class="js-image" alt="" />
+              <h2>The Art Gallery, Birmingham</h2>
+              <p>Residential</p>
+            </a>
+            <!-- END item -->
           </div>
+          <!-- END content -->
         </div>
       </div>
-    </div>
+    </main>
+
     <!-- end barba -->
 
-    <div class="curtain"></div>
+    <ul class="transition">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
     <div id="container"></div>
     <script type="module" src="js/app.js"></script>
   </body>

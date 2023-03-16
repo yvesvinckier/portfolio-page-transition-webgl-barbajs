@@ -11,7 +11,6 @@ body {
 .header {
   position: relative;
   font-weight: 400;
-  color: #eee;
   position: fixed;
   left: 0;
   top: 50px;
@@ -26,13 +25,15 @@ body {
   align-content: space-between;
   justify-content: space-between;
   margin: 0 50px;
+  mix-blend-mode: difference;
+  z-index: 100;
 }
 .header a {
   text-decoration: none;
-  color: #eee;
+  color: #fff;
 }
 .header svg {
-  fill: #eee;
+  fill: #fff;
   height: 30px;
 }
 .header span {
@@ -51,7 +52,7 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: #eee;
+  background-color: #fff;
 }
 .plus_vertical {
   width: 3px;
@@ -60,7 +61,7 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: #eee;
+  background-color: #fff;
 }
 canvas {
   display: block;
@@ -212,4 +213,23 @@ figure img {
 
 canvas {
   /* display: none !important; */
+}
+
+.transition {
+  position: absolute;
+  z-index: 99;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  pointer-events: none;
+}
+
+.transition li {
+  width: 20%;
+  transform: scaleY(0);
+  background: #fff;
 }
