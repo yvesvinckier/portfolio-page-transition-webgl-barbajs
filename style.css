@@ -3,7 +3,7 @@
   padding: 0;
 }
 body {
-  background: #1b1b1b;
+  background: #000;
   font-family: "acumin-pro", sans-serif;
   font-weight: 400;
   color: #fff;
@@ -88,14 +88,14 @@ canvas {
   font-family: "acumin-variable", sans-serif;
 
   text-decoration: none;
-  color: #eee;
+  color: #fff;
   font-size: 0.7rem;
   padding-top: 6px;
   letter-spacing: 1px;
 }
 .item a {
   text-decoration: none;
-  color: #eee;
+  color: #fff;
 }
 .item h2 {
   color: #fff;
@@ -103,7 +103,7 @@ canvas {
   font-weight: 400;
 }
 .item p {
-  color: #ccc;
+  color: #fff;
   padding-top: 4px;
   font-size: 0.8rem;
 }
@@ -127,7 +127,7 @@ canvas {
   text-decoration: none;
 }
 figure {
-  border-top: 1px solid #ccc;
+  border-top: 1px solid #fff;
   margin: 3em 0 3em 0;
   padding: 3em 0 3em 0;
   display: flex;
@@ -167,7 +167,7 @@ figure img {
 }
 
 .footer {
-  border-top: 1px solid #ccc;
+  border-top: 1px solid #fff;
   padding-bottom: 6rem;
   padding-top: 6rem;
   margin-top: 200px;
@@ -193,17 +193,6 @@ figure img {
   justify-content: center;
   align-items: center;
   align-content: center;
-}
-
-.curtain {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  z-index: 100;
-  background: #949494;
-  transform: translate(0, 100%);
 }
 
 [data-barba-namespace] {
